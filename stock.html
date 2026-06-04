@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Stock - Pantry Perth</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="donate-widget/dist/donate-widget.iife.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Pantry Perth</h1>
+            <p class="tagline">Food relief, dignity, community</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="stock.html" aria-current="page">Today's Stock</a>
+            <a href="team.html">Our Team</a>
+            <a href="donate.html">Donate</a>
+            <a href="/wp/">News</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="stock">
+            <h2>What's on the shelves today</h2>
+            <p>Updated every 30 minutes across all three locations. If something you need isn't listed, give us a call — we often have items still being unpacked.</p>
+
+            <div id="stock-list">
+                <!-- populated by stock.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Pantry Perth Inc. ABN 12 345 678 901. Registered charity.</p>
+        <p>Questions? Email <a href="mailto:hello@pantryperth.org.au">hello@pantryperth.org.au</a></p>
+    </footer>
+
+    <script src="assets/js/stock.js"></script>
+</body>
+</html>

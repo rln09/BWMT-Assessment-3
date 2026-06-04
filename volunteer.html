@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer With Us - Pantry Perth</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="donate-widget/dist/donate-widget.iife.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Pantry Perth</h1>
+            <p class="tagline">Food relief, dignity, community</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="volunteer.html" aria-current="page">Volunteer</a>
+            <a href="stock.html">Today's Stock</a>
+            <a href="team.html">Our Team</a>
+            <a href="donate.html">Donate</a>
+            <a href="/wp/">News</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="signup">
+            <h2>Volunteer signup</h2>
+            <p>Fill in your details below. We'll be in touch within a week to organise an introduction shift.</p>
+
+            <form action="/wp-json/pantry/v1/volunteer-signup" method="POST" class="volunteer-form">
+                <input type="text" name="name" placeholder="Full name" required>
+                <input type="email" name="email" placeholder="Email address" required>
+                <input type="tel" name="phone" placeholder="Phone (optional)">
+                <input type="text" name="suburb" placeholder="Your suburb">
+
+                <select name="location" required>
+                    <option value="">Preferred location</option>
+                    <option value="northbridge">Northbridge</option>
+                    <option value="cannington">Cannington</option>
+                    <option value="mirrabooka">Mirrabooka</option>
+                </select>
+
+                <select name="availability" required>
+                    <option value="">When are you available?</option>
+                    <option value="weekday-morning">Weekday mornings</option>
+                    <option value="weekday-afternoon">Weekday afternoons</option>
+                    <option value="weekend">Weekends</option>
+                    <option value="flexible">Flexible</option>
+                </select>
+
+                <textarea name="notes" placeholder="Anything we should know? (skills, accessibility needs, languages spoken)"></textarea>
+
+                <button type="submit" class="btn-primary">Sign me up</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Pantry Perth Inc. ABN 12 345 678 901. Registered charity.</p>
+        <p>Questions? Email <a href="mailto:hello@pantryperth.org.au">hello@pantryperth.org.au</a></p>
+    </footer>
+</body>
+</html>

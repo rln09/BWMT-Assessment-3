@@ -1,0 +1,18 @@
+{
+  "items": [
+    { "name": "Rice (1kg bags)", "quantity": 42, "unit": "bags" },
+    { "name": "Pasta (500g)", "quantity": 28, "unit": "packets" },
+    { "name": "Tinned tomatoes", "quantity": 19, "unit": "tins" },
+    { "name": "Baked beans", "quantity": 16, "unit": "tins" },
+    { "name": "Long-life milk", "quantity": 12, "unit": "cartons" },
+    { "name": "Breakfast cereal", "quantity": 9, "unit": "boxes" },
+    { "name": "Tinned tuna", "quantity": 7, "unit": "tins" },
+    { "name": "Cooking oil", "quantity": 6, "unit": "bottles" },
+    { "name": "Tea bags (100pk)", "quantity": 5, "unit": "boxes" },
+    { "name": "Nappies (size 4)", "quantity": 4, "unit": "packs" },
+    { "name": "Tinned soup", "quantity": 3, "unit": "tins" },
+    { "name": "Peanut butter", "quantity": 2, "unit": "jars" },
+    { "name": "Toothpaste", "quantity": 1, "unit": "tubes" },
+    { "name": "Flour (plain, 1kg)", "quantity": 22, "unit": "bags" }
+  ]
+}

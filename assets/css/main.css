@@ -1,0 +1,230 @@
+/* Pantry Perth - main stylesheet */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    color: #2a2a2a;
+    background: #fafaf7;
+    line-height: 1.6;
+}
+
+/* Header */
+
+.site-header {
+    background: #2d5f3f;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.brand .tagline {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.site-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.site-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.site-nav a[aria-current="page"] {
+    border-bottom: 2px solid #f4c542;
+}
+
+/* Main */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    color: #2d5f3f;
+    margin-top: 0;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero img {
+    width: 50%;
+    height: auto;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+}
+
+/* Buttons */
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #2d5f3f;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #1f4a2e;
+}
+
+/* Donate widget button - we wanted this to stand out so it's not the standard green */
+.donate-button,
+#donate-widget-root button {
+    background: #b94545;
+    color: #c94545;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.donate-button:hover,
+#donate-widget-root button:hover {
+    background: #a13838;
+}
+
+/* Forms */
+
+.volunteer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+}
+
+.volunteer-form input,
+.volunteer-form select,
+.volunteer-form textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.volunteer-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Stock list */
+
+#stock-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.stock-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.stock-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.stock-item .qty {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Color used alone for stock status - traffic light system the previous dev set up */
+.stock-item.level-low {
+    color: #c94545;
+}
+
+.stock-item.level-medium {
+    color: #c98e45;
+}
+
+.stock-item.level-high {
+    color: #45a049;
+}
+
+/* Team */
+
+#team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.team-member {
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.team-member h3 {
+    margin: 0 0 0.25rem 0;
+}
+
+.team-member .suburb {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+
+.site-footer {
+    background: #2a2a2a;
+    color: #ccc;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: #f4c542;
+}
