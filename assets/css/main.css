@@ -205,8 +205,8 @@ h2 {
 /* Donate widget button - we wanted this to stand out so it's not the standard green */
 .donate-button,
 #donate-widget-root button {
-    background: #b94545;
-    color: #c94545;
+    background: #43967d;
+    color: #83bd99;
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
@@ -217,7 +217,7 @@ h2 {
 
 .donate-button:hover,
 #donate-widget-root button:hover {
-    background: #a13838;
+    background: #054d1a;
 }
 
 /* Forms */
