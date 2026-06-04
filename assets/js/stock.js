@@ -1,12 +1,25 @@
 // Stock display — fetches current pantry stock and renders to #stock-list
 
 // API key for the stock service. The endpoint expects this in the header.
-const STOCK_API_URL = 'http://localhost:4000/api/stock';
+const STOCK_API_URL = 'http://localhost:4000/api/stock' ;
 
 function levelClass(qty) {
     if (qty < 5) return 'level-low';
     if (qty < 15) return 'level-medium';
     return 'level-high';
+}
+
+function showError(message) {
+    const container = document.getElementById('stock-list');
+    if (container) {
+        container.innerHTML = `
+            <div class="error-message">
+                <p>⚠️ ${message}</p>
+                <p>Please check your connection or try again later.</p>
+            </div>
+        `;
+    }
+    console.error('Stock error:', message);
 }
 
 function render(items) {
@@ -15,10 +28,12 @@ function render(items) {
         <div class="stock-item ${levelClass(item.quantity)}">
             <h3>${item.name}</h3>
             <p class="qty">${item.quantity} ${item.unit} available</p>
+
         </div>
     `).join('');
 }
 
 fetch(STOCK_API_URL)
     .then(response => response.json())
-    .then(data => render(data.items));
+    .then(data => render(data.items))
+    .catch(err => showError('Could not load stock data.'));

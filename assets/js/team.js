@@ -1,6 +1,6 @@
 // Team page — loads volunteers from WordPress REST API
 
-const VOLUNTEER_ENDPOINT = '/wp-json/pantry/v1/volunteers';
+const VOLUNTEER_ENDPOINT = '/wp-json/pantry/v1/posts';
 
 function render(volunteers) {
     const container = document.getElementById('team-list');
