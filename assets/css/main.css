@@ -54,6 +54,95 @@ body {
     border-bottom: 2px solid #f4c542;
 }
 
+/* ===== MOBILE MENU STYLES - Add this entire section ===== */
+
+/* Hamburger button - hidden on desktop */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1000;
+    position: relative;
+}
+
+/* Create the three lines of the hamburger icon */
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Mobile styles - activate at 768px or lower */
+@media (max-width: 768px) {
+    .site-header {
+        position: relative;
+        padding: 1rem;
+    }
+    
+    /* Show hamburger button on mobile */
+    .nav-toggle {
+        display: block;
+    }
+    
+    /* Style the navigation for mobile */
+    .site-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #2d5f3f;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 5rem 2rem 2rem 2rem;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    /* When menu is open, slide it in */
+    .site-nav.is-open {
+        transform: translateX(0);
+    }
+    
+    /* Make navigation links larger for touch targets */
+    .site-nav a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        display: block;
+    }
+    
+    /* Animate hamburger to X when open */
+    .nav-toggle.is-open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    
+    .nav-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.is-open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .site-nav {
+        width: 100%;
+        max-width: none;
+    }
+}
+
 /* Main */
 
 main {
