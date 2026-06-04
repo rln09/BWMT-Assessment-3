@@ -319,3 +319,162 @@ h2 {
 .site-footer a {
     color: #f4c542;
 }
+/* News section styles - aligned with Pantry Perth theme */
+
+.news-section {
+    max-width: 1100px;  /* Matches main container width */
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.news-section h2 {
+    color: #2d5f3f;  /* Matches brand green */
+    margin-top: 0;
+}
+
+.news-section > p {
+    color: #2a2a2a;
+    margin-bottom: 2rem;
+}
+
+/* News list container - matches grid patterns from other sections */
+#news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Individual news item - consistent with team-member and stock-item styling */
+.news-item {
+    display: flex;
+    gap: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 4px;  /* Matches other components */
+    border: 1px solid #e0e0e0;  /* Consistent border style */
+    transition: box-shadow 0.2s ease;
+}
+
+.news-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.news-image {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;  /* Matches site border radius */
+    background: #fafaf7;
+}
+
+.news-content {
+    flex: 1;
+}
+
+/* Headline styling - matches h3 in stock/team sections */
+.news-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;  /* Consistent with stock-item h3 */
+    color: #2a2a2a;
+}
+
+.news-content h3 a {
+    color: #2a2a2a;
+    text-decoration: none;
+}
+
+.news-content h3 a:hover {
+    color: #2d5f3f;
+    text-decoration: underline;
+}
+
+/* Meta information styling */
+.news-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;  /* Smaller, matches .qty size */
+    color: #666;  /* Matches .suburb and .qty color */
+}
+
+.news-author {
+    color: #2d5f3f;
+    font-weight: 500;
+}
+
+.news-date {
+    color: #666;
+}
+
+/* Excerpt styling */
+.news-excerpt {
+    color: #2a2a2a;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Read more link - uses brand accent color from footer */
+.read-more {
+    display: inline-block;
+    color: #f4c542;  /* Matches footer link color and brand accent */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    color: #2d5f3f;  /* Changes to brand green on hover */
+    text-decoration: underline;
+}
+
+/* Empty/error states - matches pattern from stock page */
+.error-message, 
+.no-news {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    color: #c94545;  /* Uses stock level-low color for errors */
+}
+
+.error-message p:first-child,
+.no-news p:first-child {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile responsive - follows existing mobile breakpoint */
+@media (max-width: 768px) {
+    .news-section {
+        padding: 1rem;
+    }
+    
+    .news-item {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .news-image {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .news-meta {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .news-content h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .news-image {
+        height: 150px;
+    }
+}
