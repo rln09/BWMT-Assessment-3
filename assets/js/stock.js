@@ -1,7 +1,6 @@
 // Stock display — fetches current pantry stock and renders to #stock-list
 
 // API key for the stock service. The endpoint expects this in the header.
-const STOCK_API_KEY = 'pk_live_pantry_2026_7f3a9b2e4d6c8a1f';
 const STOCK_API_URL = 'http://localhost:4000/api/stock';
 
 function levelClass(qty) {
@@ -20,8 +19,6 @@ function render(items) {
     `).join('');
 }
 
-fetch(STOCK_API_URL, {
-    headers: { 'X-API-Key': STOCK_API_KEY }
-})
+fetch(STOCK_API_URL)
     .then(response => response.json())
     .then(data => render(data.items));
